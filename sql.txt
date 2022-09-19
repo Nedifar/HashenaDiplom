@@ -1,0 +1,5 @@
+Данные от sql:
+Имя сервера: sql8001.site4now.net
+Логин: db_a8682a_dbmark_admin
+Пароль: i!2A.VQqBwV!3Mh
+Проверка подлинност SQL Server

@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="Project.Forms.Requests"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Project.Forms" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <materialDesign:TransitioningContent x:Name="TransContent" OpeningEffect="{materialDesign:TransitionEffect ExpandIn, Duration=0:0:0.8}">
+            <StackPanel>
+                <TextBlock Text="Обращения" FontSize="26" Margin="20" Foreground="White"/>
+                <DataGrid x:Name="dgOrder" Margin="20 30 20 20" AutoGenerateColumns="False" IsReadOnly="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Номер обращения" Binding="{Binding idQestion}"/>
+                        <DataGridTextColumn Header="ФИО обратившегося" Binding="{Binding Buyer.fullName}"/>
+                        <DataGridTextColumn Header="Тема" Binding="{Binding main}"/>
+                        <DataGridTemplateColumn>
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button Content="Ответить" Click="clReply"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
+        </materialDesign:TransitioningContent>
+    </Grid>
+</UserControl>

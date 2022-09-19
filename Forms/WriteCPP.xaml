@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="Project.Forms.WriteCPP"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Project.Forms" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <materialDesign:TransitioningContent x:Name="TransContent" OpeningEffect="{materialDesign:TransitionEffect ExpandIn, Duration=0:0:0.8}">
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Назад" VerticalAlignment="Top" Click="cl_Back"/>
+                <StackPanel Margin="10 0">
+                    <TextBox Foreground="White" Text="{Binding main}" materialDesign:HintAssist.Hint="Тема" Style="{DynamicResource MaterialDesignFloatingHintTextBox}"/>
+                    <TextBox Foreground="White" Text="{Binding message}" materialDesign:HintAssist.Hint="Вопрос" Width="300" TextWrapping="Wrap" AcceptsReturn="True"/>
+                    <Button Content="Отправить" Click="clSave" Margin="0 20"/>
+                </StackPanel>
+            </StackPanel>
+        </materialDesign:TransitioningContent>
+    </Grid>
+</UserControl>

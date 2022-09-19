@@ -1,0 +1,16 @@
+﻿<Window x:Class="Project.Forms.OrderAccept"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:mat="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:Project.Forms"
+        mc:Ignorable="d"
+        Title="OrderAccept" Height="150" Width="200">
+    <Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBox x:Name="tbPlan" Width="140" mat:HintAssist.Hint="Срок работы в минутах" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+            <Button Margin="10" Content="Начать выполнение" Click="clClick"/>
+        </StackPanel>
+    </Grid>
+</Window>

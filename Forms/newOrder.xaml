@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="Project.Forms.newOrder"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Project.Forms"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <StackPanel Orientation="Horizontal">
+            <Button Content="Назад" VerticalAlignment="Top" Click="cl_Back"/>
+            <StackPanel Margin="20 5">
+                <TextBlock  Text="Формирование заказа" FontSize="26" Margin="20" Foreground="White"/>
+                <StackPanel Orientation="Horizontal">
+                    <TextBox Foreground="White" x:Name="Name" materialDesign:HintAssist.Hint="Полное имя" Width="236"/>
+                </StackPanel>
+                <ComboBox DropDownOpened="cbProduct_DropDownOpened" DropDownClosed="cbProduct_DropDownClosed" Foreground="White" x:Name="cbService" DisplayMemberPath="name" materialDesign:HintAssist.Hint="Услуга" Margin="0 0 20 0"/>
+                <StackPanel x:Name="spServices">
+                    <ComboBox DropDownOpened="cbProduct_DropDownOpened" DropDownClosed="cbProduct_DropDownClosed"  Foreground="White" x:Name="cbProduct" materialDesign:HintAssist.Hint="Продукт" DisplayMemberPath="name" Margin="0 0 20 0"/>
+                </StackPanel>
+                <Button Content="Добавить продукт" HorizontalAlignment="Left" Grid.Row="1" Margin="0 10 0 10" Click="addNewLabelForService"/>
+                <Button Content="Сформировать заказ" HorizontalAlignment="Left" Grid.Row="1" Click="clFinishOrder"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

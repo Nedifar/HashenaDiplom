@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="Project.Forms.EditBuyer"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Project.Forms" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <materialDesign:TransitioningContent x:Name="TransContent" OpeningEffect="{materialDesign:TransitionEffect ExpandIn, Duration=0:0:0.8}">
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Назад" VerticalAlignment="Top" Click="cl_Back"/>
+                <StackPanel Margin="10 0">
+                    <TextBox Foreground="White" Text="{Binding idBuyer}" IsReadOnly="True" materialDesign:HintAssist.Hint="Код покупателя" Style="{DynamicResource MaterialDesignFloatingHintTextBox}"/>
+                    <TextBox Foreground="White" Text="{Binding login}" materialDesign:HintAssist.Hint="Логин" Style="{DynamicResource MaterialDesignFloatingHintTextBox}"/>
+                    <TextBox Foreground="White" Text="{Binding pas}" materialDesign:HintAssist.Hint="Пароль" Style="{DynamicResource MaterialDesignFloatingHintTextBox}"/>
+                    <TextBox Foreground="White" Text="{Binding lastName}" materialDesign:HintAssist.Hint="Фамилия" Style="{DynamicResource MaterialDesignFloatingHintTextBox}"/>
+                    <TextBox Foreground="White" Text="{Binding firstName}" materialDesign:HintAssist.Hint="Имя" Style="{DynamicResource MaterialDesignFloatingHintTextBox}"/>
+                    <TextBox Foreground="White" Text="{Binding midlleName}" materialDesign:HintAssist.Hint="Отчество" Style="{DynamicResource MaterialDesignFloatingHintTextBox}"/>
+                    <TextBox Foreground="White" Text="{Binding phone}" materialDesign:HintAssist.Hint="Телефон" Style="{DynamicResource MaterialDesignFloatingHintTextBox}"/>
+                    <TextBox Foreground="White" Text="{Binding address}" materialDesign:HintAssist.Hint="Адрес" Style="{DynamicResource MaterialDesignFloatingHintTextBox}"/>
+                    <Button Content="Сохранить" Click="clSave" Margin="0 20"/>
+                </StackPanel>
+            </StackPanel>
+        </materialDesign:TransitioningContent>
+    </Grid>
+</UserControl>
